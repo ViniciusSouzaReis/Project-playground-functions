@@ -19,23 +19,49 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let display = names[names.length - 1] + ", " + names[0];
+  return display;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitorias = wins;
+  vitorias *= 3;
+  let pontos = vitorias + ties;
+  return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function higherValue (numbers) {
+  let hValue = numbers[0];
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > hValue) {
+      hValue = numbers[i];
+    }
+  }
+  return hValue;
+}
+
+function highestCount(numbers) {
+  let valueCount = 0;
+  let valueMaximum = higherValue(numbers);
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (valueMaximum === numbers[index]) {
+      valueCount += 1;
+    }
+  }
+  return valueCount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat2 - mouse) < (cat1 - mouse)) {
+    return 'cat2';
+  } else if ((cat2 - mouse) === (cat1 - mouse)) {
+    return 'os gatos trombam e o rato foge';
+  }
+    return 'cat1';
 }
 
 // Desafio 8
