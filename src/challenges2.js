@@ -4,11 +4,11 @@ function repetibleNumber(array) {
   let contNumero = 0;
   let indexNumeroMaisRepete = 0;
   for (let i = 0; i < array.length; i += 1) {
-      for (let index = 0; index < array.length; index += 1){
-          if (array[i] === array[index]) {
-              numeroRepetido += 1; 
-          }
+    for (let index = 0; index < array.length; index += 1){
+      if (array[i] === array[index]) {
+        numeroRepetido += 1; 
       }
+    }
       if (numeroRepetido > contNumero) {
           contNumero = numeroRepetido;
           indexNumeroMaisRepete = i;
@@ -50,10 +50,19 @@ function generatePhoneNumber(array) {
   }
   return tellphone;
 }
-console.log(generatePhoneNumber([]));
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let difAB = Math.abs(lineA - lineB);
+  let difAC = Math.abs(lineA - lineC);
+  let difBC = Math.abs(lineB - lineC);
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  if (sumAB > lineC && sumAC > lineB && sumBC > lineA && lineA > difBC && lineB > difAC && lineC > difAB) {
+    return true;
+  }
+    return false;
 }
 
 // Desafio 13
