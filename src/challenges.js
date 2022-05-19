@@ -145,7 +145,7 @@ function techList(array, string) {
 
   let techObject = [];
   for (let i = 0; i < array.length; i += 1) {
-    techObject.push({tech: array[i], name: string,});
+    techObject.push({ tech: array[i], name: string });
   }
   return techObject;
 }
