@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function higherValue (numbers) {
+function higherValue(numbers) {
   let hValue = numbers[0];
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > hValue) {
@@ -137,8 +137,17 @@ function decode(text2) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  array = array.sort();
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
+  let techObject = [];
+  for (let i = 0; i < array.length; i += 1) {
+    techObject.push({tech: array[i], name: string,});
+  }
+  return techObject;
 }
 
 module.exports = {
