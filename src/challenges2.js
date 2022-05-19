@@ -66,8 +66,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function sumNumbers (string) {
+  let removeNumber = string;
+  let formula = /\d+/g;
+  let result = removeNumber.match(formula);
+  let numbers = 0;
+  let sum = 0;
+  for (let i = 0; i < result.length; i += 1) {
+    numbers = parseInt(result[i]);
+    sum += numbers;
+    numbers = 0;
+  }
+  return sum;
+}
+
+function hydrate(string) {
+  let phrase;
+  let soma = sumNumbers(string);
+  if (soma === 1) {
+    phrase = soma + ' copo de água';
+  } else {
+    phrase = soma + ' copos de água';
+  }
+  return phrase;
 }
 
 module.exports = {
